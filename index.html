@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>API Planetas Star Wars</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Star Wars Planets Tour</h1>
+        <p>Explore os planetas abaixo (clique ou digite o nome do planeta)</p>
+        <span>
+            <input class="search" type="text" placeholder="Nome do planeta">
+            <button class="btn">Buscar</button>
+            <p class="error show-hide">Planeta não encontrado. Verifique a digitação</p>
+        </span>
+
+    </div>
+    <div class="container">
+        <div class="planet">
+            <p class="name">Tatooine</p>
+        </div>
+        <div class="planet">
+            <p class="name">Alderaan</p>
+        </div>
+        <div class="planet">
+            <p class="name">Yavin IV</p>
+        </div>
+        <div class="planet">
+            <p class="name">Hoth</p>
+        </div>
+        <div class="planet">
+            <p class="name">Dagobah</p>
+        </div>
+        <div class="planet">
+            <p class="name">Bespin</p>
+        </div>
+        <div class="planet">
+            <p class="name">Endor</p>
+        </div>
+        <div class="planet">
+            <p class="name">Naboo</p>
+        </div>
+        <div class="planet">
+            <p class="name">Coruscant</p>
+        </div>
+        <div class="planet">
+            <p class="name">Kamino</p>
+        </div>
+    </div>
+    <div class="popup-wrapper show-hide">
+
+        <div class="popup">
+            <div class="modal-close">x</div>
+
+
+            <span class="data">
+                <h2>Nome:</h2>
+                <p class="planet-name"></p>
+            </span>
+
+            <span class="data">
+                <h2>Clima:</h2>
+                <p class="planet-climate"></p>
+            </span>
+
+            <span class="data">
+                <h2>População:</h2>
+                <p class="planet-population"></p>
+            </span>
+
+            <span class="data">
+                <h2>Terreno:</h2>
+                <p class="planet-terrain"></p>
+            </span>
+
+            <hr class="division-line show-hide">
+
+            <span class="data">
+                <h2 class="celeb-title"></h2>
+                <p class="planet-terrain"></p>
+            </span>
+            <table class="residents-tbl">
+
+            </table>
+
+        </div>
+    </div>
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

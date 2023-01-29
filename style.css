@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,200;0,300;0,400;1,200&display=swap');
+
+:root {
+    --ff-primary: 'MuseoModerno', cursive;
+    --ff-secondary: 'MuseoModerno', italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: url(./img/star-wars-bg.png);  */
+    /* box-shadow: inset 0 0 0 100vmax rgba(97, 7, 7, 0.6); */
+
+    background-image:
+    /* top, transparent red */
+    linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+    /* image */
+    url(./img/star-wars-bg.png);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    max-width: 80vw;
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 1rem;
+}
+
+h1 {
+    font-family: var(--ff-primary);
+    margin-top: 1rem;
+    font-size: 3.3em;
+    color: white;
+}
+
+.planet {
+    border: 1px solid white;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+}
+
+.planet:hover {
+    cursor: pointer;
+}
+
+.whiteColor {
+    background-color: white;
+}
+
+.name {
+    font-family: var(--ff-primary);
+    font-size: 1.5rem;
+    color: white;
+}
+
+.blackColor {
+    /* color: black; */
+    color: rgba(194, 0, 0, 0.938);
+}
+
+.header p {
+     font-family: var(--ff-secondary);
+     color: white;
+     font-size: 1.2rem;
+}
+
+.popup-wrapper {
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: rgba(61, 2, 2, 0.45);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: 1000ms;
+    overflow: auto;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 85vw;
+    min-width: 30vw;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 00.5rem;
+    z-index: 3;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+hr {
+    border: 1px solid rgba(194, 0, 0, 0.938);
+    width: 90%;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 0.2rem;
+}
+
+.popup h2 {
+    font-family: var(--ff-primary);
+    font-size: 1em;
+    color: rgb(146, 146, 146);
+    align-self: center;
+}
+
+.popup p {
+    font-family: var(--ff-secondary);
+    font-size: 1.2em;
+    color: Black;
+    align-self: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.modal-close {
+    margin: 0.5rem 1rem;
+    align-self: flex-end;
+    color: rgb(5, 5, 5);
+    font-family: var(--ff-primary);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.show-hide {
+    display: none;
+}
+
+.search,
+.btn {
+    height: 2rem;
+    border-style: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding-left: 0.7rem;
+    padding-right: 0.5rem;
+    font-family: var(--ff-primary);
+}
+
+.btn {
+    margin-left: 0.5rem;
+}
+
+th,
+td {
+    font-family: var(--ff-secondary);
+    color: rgb(146, 146, 146);
+    text-align: left;
+}
+
+table {
+    min-width: 20em;
+}
+
+.header > span > p {
+    font-family: var(--ff-secondary);
+    color: white;
+    font-size: 0.8rem;
+}
+
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 2em;
+    }
+}

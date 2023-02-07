@@ -3,6 +3,7 @@
 :root {
     --ff-primary: 'MuseoModerno', cursive;
     --ff-secondary: 'MuseoModerno', italic;
+    --button-width: 90%;
 }
 
 * {
@@ -33,6 +34,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 .container {
@@ -49,7 +52,7 @@ body {
 h1 {
     font-family: var(--ff-primary);
     margin-top: 1rem;
-    font-size: 3.3em;
+    font-size: 2em;
     color: white;
 }
 
@@ -188,15 +191,50 @@ table {
     min-width: 20em;
 }
 
-.header > span > p {
+.search {
+    display: flex;
+}
+
+.header > p {
     font-family: var(--ff-secondary);
     color: white;
     font-size: 0.8rem;
 }
 
+/*
+======================
+RESPONSIVO
+======================
+*/
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 465px) {
     h1 {
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+    .search {
+        width: var(--button-width);
+    }
+
+    .planet {
+        width: var(--button-width);
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        place-items: center;
+    }
+
+    .search {
+        width: 90%;
+    }
+
+    .planet {
+        width: 90%;
     }
 }

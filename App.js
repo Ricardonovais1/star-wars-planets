@@ -13,8 +13,11 @@
     const celebTitle = document.querySelector('.celeb-title');
     const residentsTbl = document.querySelector('.residents-tbl');
     const errorMessage = document.querySelector('.error');
+    const search = document.querySelector('.search');
 
     searchPlanet.focus();
+
+    search.style.width = `${planets.offsetWidth}px`;
 
     async function printPlanets() {
 

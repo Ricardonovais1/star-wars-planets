@@ -186,6 +186,7 @@ table {
 
 .search {
     display: flex;
+    justify-content: center;
 }
 
 .header > p {

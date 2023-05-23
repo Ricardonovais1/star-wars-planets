@@ -8,12 +8,13 @@
     const planetClimate = document.querySelector('.planet-climate');
     const planetPopulation = document.querySelector('.planet-population');
     const planetTerrain = document.querySelector('.planet-terrain');
-    const searchPlanet = document.querySelector('.search');
+    const searchPlanet = document.querySelector('.search-input');
     const btn = document.querySelector('.btn');
     const celebTitle = document.querySelector('.celeb-title');
     const residentsTbl = document.querySelector('.residents-tbl');
     const errorMessage = document.querySelector('.error');
     const search = document.querySelector('.search');
+
 
     searchPlanet.focus();
 
@@ -35,7 +36,6 @@
                 });
 
                 let index = planetsArray.indexOf(planet)
-                console.log(results[index].terrain)
 
                 planet.classList.add('whiteColor');
                 planetName.classList.add('blackColor');
@@ -48,19 +48,17 @@
 
         btn.addEventListener('click', () => {
 
-
             planetsArray.forEach(p => {
                 p.classList.remove('whiteColor');
                 p.firstElementChild.classList.remove('blackColor');
             });
 
-
-            let planetSeached = searchPlanet.value;
+            let planetSearched = searchPlanet.value;
 
             let resultsArray = Array.from(results);
 
             resultsArray.forEach((planet, i) => {
-                if (planetSeached.toLowerCase() == planet.name.toLowerCase()){
+                if (planetSearched.toLowerCase() == planet.name.toLowerCase()){
 
                     popupWrapper.classList.remove('show-hide');
 

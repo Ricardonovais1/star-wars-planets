@@ -12,16 +12,11 @@
 }
 
 body {
-    /* background-image: url(./img/star-wars-bg.png);  */
-    /* box-shadow: inset 0 0 0 100vmax rgba(97, 7, 7, 0.6); */
-
     background-image:
-    /* top, transparent red */
     linear-gradient(
       rgba(255, 0, 0, 0.45),
       rgba(255, 0, 0, 0.45)
     ),
-    /* image */
     url(./img/star-wars-bg.png);
 
     display: flex;
@@ -80,7 +75,6 @@ h1 {
 }
 
 .blackColor {
-    /* color: black; */
     color: rgba(194, 0, 0, 0.938);
 }
 
@@ -91,7 +85,6 @@ h1 {
 }
 
 .popup-wrapper {
-    /* background: rgba(0, 0, 0, 0.8); */
     background: rgba(61, 2, 2, 0.45);
     position: fixed;
     top: 0;
@@ -165,7 +158,7 @@ hr {
     display: none;
 }
 
-.search,
+.search-input,
 .btn {
     height: 2rem;
     border-style: none;
@@ -199,6 +192,10 @@ table {
     font-family: var(--ff-secondary);
     color: white;
     font-size: 0.8rem;
+}
+
+.error {
+    margin-top: 1rem;
 }
 
 /*
